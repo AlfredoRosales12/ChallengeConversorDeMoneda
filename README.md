@@ -20,18 +20,21 @@ Del mismo modo se hizo uso de la biblioteca HttpClient y HttpRequest y se trabaj
 
 Para completar el challenge del Conversor de Monedas en Java, se desarrolló una aplicación que consume una API de tasas de cambio y procesa la información obtenida para convertir diferentes monedas. 
 **Clase -> SolicitudMonedaBase:**
+
   La primera etapa consistió en crear una clase llamada SolicitudMonedaBase, cuya función principal es manejar las solicitudes a la API. 
   En esta clase, se utilizó la biblioteca estándar de Java, HttpClient, para realizar la llamada HTTP de manera eficiente. 
   Mediante el uso de HttpRequest, se configuró la solicitud incluyendo la URL de la API y una API key generada específicamente para acceder al servicio de Exchange Rates. 
   La respuesta de la API, en formato JSON, se gestionó mediante un objeto HttpResponse<String>, el cual almacena el contenido recibido como una cadena de texto.
 
 **Clase -> Moneda:**
+
   Para representar las monedas y sus tasas de cambio, se definió una clase de tipo Record llamada Moneda. 
   Este tipo de clase, introducido en versiones recientes de Java, es ideal para modelar datos inmutables de manera concisa. 
   La clase Moneda consta de dos campos: base, que indica la moneda base de la conversión, y rates, un mapa que contiene las monedas disponibles junto con sus respectivas tasas de cambio. 
   Esta estructura permitió un acceso sencillo y directo a los datos proporcionados por la API.
 
 **Clase -> Convertidor:**
+
   La clase Convertidor fue diseñada para encapsular la lógica principal del conversor de monedas, proporcionando un método central llamado convertir. 
   Este método es responsable de realizar la conversión de una cantidad específica de dinero entre dos monedas, utilizando las tasas de cambio obtenidas previamente desde la API.
 
@@ -45,6 +48,15 @@ Para completar el challenge del Conversor de Monedas en Java, se desarrolló una
   La clase Main es el punto de entrada de la aplicación y tiene como propósito brindar al usuario una interfaz de consola que permita realizar múltiples conversiones de monedas de manera interactiva. 
   Se implementó un menú utilizando un ciclo que permanece activo hasta que el usuario decida salir, permitiéndole realizar tantas conversiones como necesite.
 
+## :computer: Ejemplo de uso 
+
+Al ejecutar el programa aparecerá el menú del conversor y algunas notas que hay que tener en cuenta.
+
+![Imagen de la pagina](src/resources/Inicio.png)
+
+En este ejemplo convertiremos 500 USD (dólares)  a MXN (Pesos mexicanos)
+
+![Imagen de la pagina](src/resources/Conversion.png)
 
 
 ## :iphone: Contact

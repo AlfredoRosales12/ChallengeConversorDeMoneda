@@ -28,7 +28,6 @@ public class SolicitudMonedaBase {
             return gson.fromJson(json, Moneda.class);
 
         }catch (IOException | InterruptedException e) {
-            e.printStackTrace();
             System.out.println("Error al realizar la solicitud.");
             return null;
         }

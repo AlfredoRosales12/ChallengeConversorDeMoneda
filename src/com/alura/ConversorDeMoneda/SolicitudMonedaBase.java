@@ -10,7 +10,7 @@ import java.net.http.HttpResponse;
 
 public class SolicitudMonedaBase {
 
-    public Moneda solicitud (String monedaBase){
+    public Moneda solicitudBase (String monedaBase){
         final String APIKEY= "2d924bbba4ebc87a3327e1dd";
         final String URL ="https://v6.exchangerate-api.com/v6/"+APIKEY+"/latest/"+monedaBase;
 

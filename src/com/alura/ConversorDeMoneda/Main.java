@@ -6,10 +6,13 @@ public class Main {
     public static void main(String[] args) {
 
         SolicitudMonedaBase solicitud = new SolicitudMonedaBase();
+        Convertidor convertidor = new Convertidor();
 
-        Moneda monedaBase = solicitud.solicitud("USD");
+        Moneda monedaBase = solicitud.solicitudBase("USD");
 
-        System.out.println(monedaBase);
+        double valor=convertidor.convertir(monedaBase,"MXN",1258.6);
+
+        System.out.println(valor);
 
 
     }
